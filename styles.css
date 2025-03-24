@@ -12,22 +12,23 @@ body {
     padding: 20px;
     display: flex;
     align-items: center;
-    transition: transform 0.3s ease; /* Animación para mostrar/ocultar */
+    transition: transform 0.3s ease;
 }
 
 .header h1 {
     font-size: 4rem;
-    margin-bottom: 2px;
+    margin: 10px 0 2px 0;
 }
 
 .header p {
-    margin-top: 4px;
+    margin: 4px 0 0 0;
     font-size: 26px;
 }
 
 .contenido {
     display: flex;
     padding: 20px;
+    gap: 20px;
 }
 
 .sidebar {
@@ -63,45 +64,20 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.btn-category1 {
-    background-color: #ff6b6b;
-}
+.btn-category1 { background-color: #ff6b6b; }
+.btn-category1:hover { border: 2px solid #b34848; }
 
-.btn-category1:hover {
-    border: 2px solid #b34848;
-}
+.btn-category2 { background-color: #ffe66d; }
+.btn-category2:hover { border: 2px solid #ccb63d; }
 
-.btn-category2 {
-    background-color: #ffe66d;
-}
+.btn-category3 { background-color: #4ecdc4; }
+.btn-category3:hover { border: 2px solid #459993; }
 
-.btn-category2:hover {
-    border: 2px solid #ccb63d;
-}
+.btn-category4 { background-color: #886eca; }
+.btn-category4:hover { border: 2px solid #4a3d6b; }
 
-.btn-category3 {
-    background-color: #4ecdc4;
-}
-
-.btn-category3:hover {
-    border: 2px solid #459993;
-}
-
-.btn-category4 {
-    background-color: #886eca;
-}
-
-.btn-category4:hover {
-    border: 2px solid #4a3d6b;
-}
-
-.btn-category5 {
-    background-color: #df88a5;
-}
-
-.btn-category5:hover {
-    border: 2px solid #af5273;
-}
+.btn-category5 { background-color: #df88a5; }
+.btn-category5:hover { border: 2px solid #af5273; }
 
 .notes-container {
     flex: 1;
@@ -111,20 +87,7 @@ button:hover {
     gap: 10px;
 }
 
-.note {
-    padding: 15px;
-    border-radius: 5px;
-    color: #333;
-    font-size: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.note:hover {
-    transform: scale(1.02);
-}
-
+/* Modal styles */
 .overlay {
     position: fixed;
     top: 0;
@@ -150,21 +113,80 @@ button:hover {
     z-index: 1001;
 }
 
-/* Media Queries para responsive design */
-@media (min-width: 768px) {
+/* Music section */
+.music-section {
+    padding: 20px 10px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(143,141,224,1) 0%, rgba(91,89,189,1) 100%);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.music-section h3 {
+    color: #fff;
+    margin: 0 0 20px 10px;
+    font-size: 1.5rem;
+}
+
+.spotify-players {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.spotify-players iframe {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
     .contenido {
-        flex-direction: row;
+        flex-direction: column;
     }
-
+    
     .sidebar {
-        width: 300px;
+        width: auto;
     }
 
+    .spotify-players {
+        gap: 3px;
+    }
+}
+
+@media (max-width: 768px) {
     .header h1 {
-        font-size: 4rem;
+        font-size: 2.5rem;
     }
-
+    
     .header p {
-        font-size: 1.625rem;
+        font-size: 1.2rem;
+    }
+    
+    .spotify-players {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .header p {
+        font-size: 1rem;
+    }
+    
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .music-section h3 {
+        font-size: 1.3rem;
+    }
+    
+    .spotify-players iframe {
+        height: 120px;
     }
 }
