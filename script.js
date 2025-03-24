@@ -1,4 +1,4 @@
-// Datos de notas por categoría
+//Notas por categoría
 const notesByCategory = {
     razones: [
         "Te amo porque me haces sentir seguro",
@@ -64,7 +64,7 @@ const notesByCategory = {
     ]
 };
 
-// Función para generar una nota aleatoria y eliminarla de la lista
+//nota aleatoria y eliminarla de la lista
 function getRandomNote(category) {
     const notes = notesByCategory[category];
     if (notes.length === 0) return null; // Si no hay más notas, retorna null
@@ -80,7 +80,7 @@ function showNoteModal(category, backgroundColor) {
     const noteText = getRandomNote(category);
 
     if (!noteText) {
-        alert("No hay más notas en esta categoría.");
+        alert("Ya has leido todas las notas de esta categoria! 🎉");
         return;
     }
 
@@ -125,11 +125,11 @@ window.addEventListener("scroll", () => {
 
     if (scrollTop > lastScrollTop) {
         // Deslizando hacia abajo
-        header.style.transform = "translateY(-100%)"; // Oculta el header
+        header.style.transform = "translateY(-1.8%)";
     } else {
         // Deslizando hacia arriba
-        header.style.transform = "translateY(0)"; // Muestra el header
+        header.style.transform = "translateY(0)";
     }
 
-    lastScrollTop = scrollTop; // Actualiza la posición del scroll
+    lastScrollTop = scrollTop;
 });
