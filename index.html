@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Frasco de Notas</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tempstyles.css">
     <link rel="shortcut icon" href="heartPX.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
     <div class="header">
@@ -14,35 +16,114 @@
             <p>Hecho con amor para ti ♡</p>
         </div>
     </div>
+
     <div class="contenido">
-        <div class="sidebar">
-            <p>Selecciona una nota a leer:</p>
-            <div class="buttons">
-                <button class="btn-category1" data-category="razones" style="background-color: #ff6b6b;">Razones por la que te amo</button>
-                <button class="btn-category2" data-category="agradecimiento" style="background-color: #ffe66d;">Agradecimiento</button>
-                <button class="btn-category3" data-category="futuro" style="background-color: #4ecdc4;">Futuros planes</button>
-                <button class="btn-category4" data-category="motivacion" style="background-color: #886eca;">Notas de Motivación</button>
-                <button class="btn-category5" data-category="biblicos" style="background-color: #df88a5;">Frases Bíblicas</button>
+        <!-- Sección de Notas -->
+        <div class="notes-section section active">
+            <div class="sidebar">
+                <p>Selecciona una nota a leer:</p>
+                <div class="buttons">
+                    <button class="btn-category btn-category1" data-category="razones">
+                        <i class="fas fa-heart"></i> Razones por la que te amo
+                    </button>
+                    <button class="btn-category btn-category2" data-category="agradecimiento">
+                        <i class="fas fa-hands-praying"></i> Agradecimiento
+                    </button>
+                    <button class="btn-category btn-category3" data-category="futuro">
+                        <i class="fas fa-calendar-star"></i> Futuros planes
+                    </button>
+                    <button class="btn-category btn-category4" data-category="motivacion">
+                        <i class="fas fa-star"></i> Notas de Motivación
+                    </button>
+                    <button class="btn-category btn-category5" data-category="biblicos">
+                        <i class="fas fa-book-bible"></i> Frases Bíblicas
+                    </button>
+                </div>
+            </div>
+            <div class="notes-container"></div>
+        </div>
+
+        <!-- Sección de Música -->
+        <div class="music-section section">
+            <div class="section-header">
+                <h3><i class="fas fa-music"></i> Música que me recuerda a ti</h3>
+                <p class="subtitle">Canciones que hacen latir mi corazón por ti</p>
+            </div>
+            <div class="spotify-players">
+                <iframe loading="lazy" style="border-radius:12px" src="https://open.spotify.com/embed/track/6ERI20r4GlgPI6ZDVLcGMO?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <iframe loading="lazy" style="border-radius:12px" src="https://open.spotify.com/embed/track/1SpO1TuC0yVzDnfLcZ85xA?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <iframe loading="lazy" style="border-radius:12px" src="https://open.spotify.com/embed/track/4jjFjbqCTkaN1mGb0BMYl2?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <iframe loading="lazy" style="border-radius:12px" src="https://open.spotify.com/embed/track/6cJLfIqwh0tCKRjYM3WpZ5?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
             </div>
         </div>
-        <div class="notes-container">
-            <!-- Aquí aparecerán las notas generadas -->
+
+        <!-- Sección del Contador -->
+        <div class="counter-section section">
+            <div class="section-header">
+                <h3><i class="fas fa-clock"></i> Nuestro tiempo juntos</h3>
+                <p class="subtitle">Cada segundo a tu lado es un regalo</p>
+            </div>
+            
+            <div class="time-counter">
+                <div id="time-together">Cargando...</div>
+                <div class="time-display">
+                    <div class="time-block">
+                        <span id="days">0</span>
+                        <span>Días</span>
+                    </div>
+                    <div class="time-block">
+                        <span id="hours">0</span>
+                        <span>Horas</span>
+                    </div>
+                    <div class="time-block">
+                        <span id="minutes">0</span>
+                        <span>Minutos</span>
+                    </div>
+                    <div class="time-block">
+                        <span id="seconds">0</span>
+                        <span>Segundos</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="calendar-container">
+                <input type="text" id="calendar" placeholder="Selecciona una fecha especial" readonly>
+            </div>
+            
+            <div class="milestones-container">
+                <h4><i class="fas fa-trophy"></i> Próximos hitos</h4>
+                <div class="milestones-list"></div>
+            </div>
         </div>
     </div>
-    <div class="music-section">
-        <h3>Música que me recuerda a ti</h3>
-        <div class="spotify-players">
-            <!-- Reggaetón Romántico -->
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6ERI20r4GlgPI6ZDVLcGMO?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1SpO1TuC0yVzDnfLcZ85xA?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4jjFjbqCTkaN1mGb0BMYl2?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6cJLfIqwh0tCKRjYM3WpZ5?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0u4N6w5lBw5xMrzJitRWUo?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6WfxIJKmYRSpsBJv0tEAKX?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4tQofG51E0juZBBVr6pral?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7D93pJcwymzaZx8WgBo2zG?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <!-- Menú Inferior -->
+    <div class="bottom-nav">
+        <button class="nav-btn active" data-section="notes">
+            <i class="fa-regular fa-envelope-open"></i>
+            <span class="text">Notas</span>
+        </button>
+        <button class="nav-btn" data-section="music">
+            <i class="fa-regular fa-compact-disc"></i>
+            <span class="text">Música</span>
+        </button>
+        <button class="nav-btn" data-section="counter">
+            <i class="fa-regular fa-calendar-days"></i>
+            <span class="text">Nuestro Tiempo</span>
+        </button>
+    </div>
+
+    <!-- Notificación diaria -->
+    <div class="daily-notification">
+        <div class="notification-content">
+            <button class="close-notification"><i class="fas fa-times"></i></button>
+            <h4>Mensaje del día</h4>
+            <p class="notification-message"></p>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+    <script src="tempjs.js"></script>
 </body>
 </html>
