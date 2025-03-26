@@ -1,4 +1,4 @@
-//Notas por categoría
+// Datos de notas por categoría
 const notesByCategory = {
     razones: [
         "Te amo porque me haces sentir seguro",
@@ -46,61 +46,143 @@ const notesByCategory = {
         ""
     ],
     agradecimiento: [
-        ""
+        "Gracias por iluminar mi vida con tu amor cada dia",
+        "Tu amor es mi mayor tesoro",
+        "Agradezco a la vida por ponerte en mi camino y permitirme amarte",
+        "No hay dia que no me sienta afortunado por tenerte a ti",
+        "Gracias por quererme y hacerme feliz",
+        "Gracias por ser mi razon para sonreir",
+        "Gracias por ser mi mayor inspiracion",
+        "Gracias por estar en los buenos y malos momentos, El amor lo supera todo",
+        "Eres la razon por la que mi corazoncito late de felicidad y gratitud",
+        "Gracias por hacerme mejor persona",
+        "Agradezco cada muestra de tu amor incondicional",
+        "Eres el sueño que nunca quiero dejar de vivir",
+        "Eres mi paz en el caos, mi alegria en los dias oscuros",
+        "No sé que hice para merecerte, pero prometo amarte y cuidarte toda la vida",
+        "Cada 'te amo' tuyo es un latido mas en mi corazon",
+        "Gracias por amarme como nadie más lo ha hecho",
+        "Gracias por recordarme lo importante que soy para ti",
+        "No importa lo que pase, siempre estare aqui para ti, como tu lo has estado para mi",
+        "Cada dia a tu lado es un paso mas hacia el futuro que soñamos",
+        "El tiempo vuela, pero mi amor por ti crece cada segundo",
+        "Aunque no lo diga tanto, eres lo mejor que me ha pasado",
+        "Aunque a veces no lo demuestre, siempre pienso en ti y en lo afortunado que soy",
+        "Aunque la vida nos ponga pruebas, se que juntos podemos con todo",
+        "Si tuviera que agradecerte por todo lo que has hecho y haces por mi, necesitaria otra vida entera",
+        "Gracias por hacerme el hombre mas feliz con tu amor",
+        "Gracias por hacer especial todos mis dias",
+        "Despertar sabiendo que eres mía es el mejor buen día posible",
+        "Eres la unica que le da sentido a todo",
+        "Mi mundo sin ti no podría girar",
+        "Mi mundo es mas brillante porque tu estas en él",
+        "La distancia hace mas fuerte el amor. Pronto estaré contigo para divertirnos y pasarla bien juntos",
+        "Si tuviera que vivir todas mis vidas de nuevo, en cada una te buscaría para amarte como lo hago ahora",
+        "El futuro contigo dan ganas de vivirlo",
+        "Te guardo en mi alma porque tu amor se vive y se siente",
+        "Eres la dueña absoluta de mi corazon"
     ],
     futuro: [
-        "Viajaremos por el mundo juntos.",
-        "Construiremos una familia llena de amor.",
-        "Seguiremos creciendo juntos.",
+        "Prometo construir un futuro donde tu sonrisa sea mi mayor logro",
+        "Mi plan perfecto eres tu, y lo demás lo iremos construyendo juntos",
+        "Me imagino despertando cada dia a tu lado, escuchando tu linda voz diciendo 'buenos dias'",
+        "Prometo apoyarte en cada meta que te propongas",
+        "Celebrare todos tus logros y sere tu mayor admirador siempre",
+        "Nuestra casa estara lleno de amor",
+        "Mi mayor sueño sos vos en cada etapa de mi vida",
+        "Cualquier lugar donde tu estés sera mi destino favorito",
+        "Quiero envejecer contigo, recordando cada aventura que vivimos juntos",
+        "No importa si estamos ocupados, siempre voy a guardar espacio para compartir tiempo juntos",
+        "",
     ],
     motivacion: [
-        "Eres capaz de lograr todo lo que te propongas.",
-        "Nunca dejes de creer en ti.",
-        "El éxito es tuyo, sigue adelante.",
+        "Eres tu misma y eso es lo mas especial",
+        "Pase lo que pase, estare aqui para celebrar tu exito y abrazarte en tus fracasos",
+        "No importa que tan dificil sea, caminare a tu lado sin dudarlo",
+        "Cuando dudes de ti misma, te prestare mis ojos porque yo te veo una verdadera guerrera",
+        "Eres mi inspiracion, si tu crees en ti, yo creo el doble",
+        "Te amo no solo por lo que eres, sino por lo que te has convertido: UNA MUJER MARAVILLOSA",
+        ""
     ],
     biblicos: [
         "Y sobre todas estas cosas vestíos de amor, que es el vínculo perfecto. (Colosenses 3:14)",
-        "Como llama divina es el fuego ardiente del amor. Ni las muchas aguas pueden apagarlo, ni los ríos pueden extinguirlo. (Cantares 8:6b-7a)"
+        "Como llama divina es el fuego ardiente del amor. Ni las muchas aguas pueden apagarlo, ni los ríos pueden extinguirlo. (Cantares 8:6b-7a)",
+        "El amor es sufrido, es benigno; el amor no tiene envidia, el amor no es jactancioso, no se envanece. 1 Corintios 13:4",
+
     ]
 };
 
-//nota aleatoria y eliminarla de la lista
+// Obtener o inicializar el estado guardado
+function getSavedState() {
+    const savedState = localStorage.getItem('notesState');
+    return savedState ? JSON.parse(savedState) : {
+        razones: [...notesByCategory.razones],
+        agradecimiento: [...notesByCategory.agradecimiento],
+        futuro: [...notesByCategory.futuro],
+        motivacion: [...notesByCategory.motivacion],
+        biblicos: [...notesByCategory.biblicos]
+    };
+}
+
+// Guardar el estado actual
+function saveState(state) {
+    localStorage.setItem('notesState', JSON.stringify(state));
+}
+
+// Estado inicial
+let state = getSavedState();
+
+// Función para generar una nota aleatoria y actualizar el estado
 function getRandomNote(category) {
-    const notes = notesByCategory[category];
-    if (notes.length === 0) return null; // Si no hay más notas, retorna null
+    const notes = state[category];
+    if (notes.length === 0) return null;
 
     const randomIndex = Math.floor(Math.random() * notes.length);
     const note = notes[randomIndex];
-    notes.splice(randomIndex, 1); // Elimina la nota de la lista
+    
+    // Actualizar estado
+    notes.splice(randomIndex, 1);
+    state[category] = notes;
+    saveState(state);
+    
     return note;
 }
 
-// Función para mostrar la nota como un modal
+// Función para resetear todas las notas
+function resetAllNotes() {
+    if (confirm("¿Estás seguro que quieres reiniciar todas las notas? Esto volverá a habilitar todas las notas de todas las categorías.")) {
+        state = {
+            razones: [...notesByCategory.razones],
+            agradecimiento: [...notesByCategory.agradecimiento],
+            futuro: [...notesByCategory.futuro],
+            motivacion: [...notesByCategory.motivacion],
+            biblicos: [...notesByCategory.biblicos]
+        };
+        saveState(state);
+        alert("¡Todas las notas han sido reiniciadas! 🎉");
+    }
+}
+
+// Función para mostrar la nota como un modal (sin cambios)
 function showNoteModal(category, backgroundColor) {
     const noteText = getRandomNote(category);
 
     if (!noteText) {
-        alert("Ya has leido todas las notas de esta categoria! 🎉");
+        alert("Ya has leído todas las notas de esta categoría! 🎉");
         return;
     }
 
-    // Crear el overlay (fondo semitransparente)
     const overlay = document.createElement("div");
     overlay.classList.add("overlay");
 
-    // Crear el modal de la nota
     const noteModal = document.createElement("div");
     noteModal.classList.add("note-modal");
     noteModal.textContent = noteText;
     noteModal.style.backgroundColor = backgroundColor;
 
-    // Agregar el modal al overlay
     overlay.appendChild(noteModal);
-
-    // Agregar el overlay al body
     document.body.appendChild(overlay);
 
-    // Cerrar el modal al hacer clic fuera de la nota
     overlay.addEventListener("click", (event) => {
         if (event.target === overlay) {
             document.body.removeChild(overlay);
@@ -108,7 +190,7 @@ function showNoteModal(category, backgroundColor) {
     });
 }
 
-// Escuchar clics en los botones del sidebar
+// Escuchar clics en los botones del sidebar (sin cambios)
 document.querySelectorAll(".buttons button").forEach((button) => {
     button.addEventListener("click", () => {
         const category = button.getAttribute("data-category");
@@ -117,19 +199,31 @@ document.querySelectorAll(".buttons button").forEach((button) => {
     });
 });
 
-let lastScrollTop = 0; // Almacena la posición del último scroll
+// Añadir botón de reset (nuevo)
+function addResetButton() {
+    const sidebar = document.querySelector(".sidebar");
+    const resetBtn = document.createElement("button");
+    resetBtn.textContent = "Reiniciar todas las notas";
+    resetBtn.style.backgroundColor = "#888";
+    resetBtn.style.marginTop = "20px";
+    resetBtn.style.width = "100%";
+    resetBtn.addEventListener("click", resetAllNotes);
+    sidebar.appendChild(resetBtn);
+}
+
+// Inicializar
+addResetButton();
+
+// Efecto de scroll (sin cambios)
+let lastScrollTop = 0;
 const header = document.querySelector(".header");
 
 window.addEventListener("scroll", () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
     if (scrollTop > lastScrollTop) {
-        // Deslizando hacia abajo
         header.style.transform = "translateY(-1.8%)";
     } else {
-        // Deslizando hacia arriba
         header.style.transform = "translateY(0)";
     }
-
     lastScrollTop = scrollTop;
 });
