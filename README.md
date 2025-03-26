@@ -1,3 +1,3 @@
-# Love-Jar
-
-Este es un frasco de notas de amor para mi amada novia... 
+#Download Love Jar
+__**Instructions:**__
+  This app is only for Mobile Devices
