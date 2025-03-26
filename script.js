@@ -1,174 +1,85 @@
 // Datos de notas por categoría
 const notesByCategory = {
     razones: [
-        "Te amo porque me haces sentir seguro",
-        "Te amo porque se que puedo contar contigo",
-        "Te amo por tu paciencia conmigo",
-        "Te amo por dedicar tiempo conmigo",
-        "Te amo porque me mostras cuánto me amas",
-        "Te amo porque me haces sentir una mejor persona",
-        "Te amo porque me amas tal como soy",
-        "Te amo porque me haces sentir especial",
-        "Me encantan tus ojos",
-        "Te amo porque siempre cuidas de mi",
-        "Me encantan tus labios",
-        "Te amo porque siempre me apoyas",
-        "Te amo porque eres mi lugar seguro",
-        "Te amo porque haces que cada día sea mejor",
-        "Te amo porque siempre sabes cómo hacerme sonreír",
-        "Te amo porque eres increíblemente fuerte",
-        "Te amo porque eres mi inspiración",
-        "Te amo porque siempre me entiendes",
-        "Te amo porque haces que me sienta amado",
-        "Te amo porque eres mi compañera de vida",
-        "Te amo porque siempre estás ahí para mí",
-        "Te amo porque haces que mi vida sea completa",
-        "Te amo porque eres inteligente",
-        "Te amo porque sos hermosa, por dentro y por fuera",
-        "Te amo porque siempre sabes que decir para animarme",
-        "Te amo porque tu presencia me llena de paz",
-        "Te amo porque eres mi razón para dar lo mejor de mí",
-        "Te amo porque eres mi razón para creer en el amor verdadero",
-        "Te amo porque simplemente no puedo imaginar mi vida sin vos",
-        "Te amo porque eres mi lugar seguro en mis momentos dificiles",
-        "Te amo por tu forma de cuidarme",
-        "Te amo porque contigo es una aventura nueva cada día",
-        "Te amo porque mi futuro sera lleno de felicidad junto a vos",
-        "Te amo porque tienes sueños que admiro",
-        "Te amo porque me enseñas nuevas cosas",
-        "Te amo porque me haces sentir que soy muy afortunado de tenerte",
-        "Te amo porque eres mi razon para creer que el amor puede ser tan mágico",
-        "Te amo porque contigo cada día aburrido se vuelve en un día lleno de risas y amor",
-        "Te amo porque siempre sabes calmarme cuando estoy estresado",
-        "Te amo porque me haces sentir que puedo lograr cualquier cosa con tu apoyo",
-        "Te amo porque me haces sentir suficiente tal como soy",
-        "Te amo porque cada día contigo es un regalo",
-        ""
+        "Por tu sonrisa que ilumina mis días",
+        "Por cómo me haces sentir especial",
+        "Por tu paciencia y comprensión",
+        "Por tu forma única de ver la vida",
+        "Por cómo me apoyas en todo momento"
     ],
     agradecimiento: [
-        "Gracias por iluminar mi vida con tu amor cada dia",
-        "Tu amor es mi mayor tesoro",
-        "Agradezco a la vida por ponerte en mi camino y permitirme amarte",
-        "No hay dia que no me sienta afortunado por tenerte a ti",
-        "Gracias por quererme y hacerme feliz",
-        "Gracias por ser mi razon para sonreir",
-        "Gracias por ser mi mayor inspiracion",
-        "Gracias por estar en los buenos y malos momentos, El amor lo supera todo",
-        "Eres la razon por la que mi corazoncito late de felicidad y gratitud",
-        "Gracias por hacerme mejor persona",
-        "Agradezco cada muestra de tu amor incondicional",
-        "Eres el sueño que nunca quiero dejar de vivir",
-        "Eres mi paz en el caos, mi alegria en los dias oscuros",
-        "No sé que hice para merecerte, pero prometo amarte y cuidarte toda la vida",
-        "Cada 'te amo' tuyo es un latido mas en mi corazon",
-        "Gracias por amarme como nadie más lo ha hecho",
-        "Gracias por recordarme lo importante que soy para ti",
-        "No importa lo que pase, siempre estare aqui para ti, como tu lo has estado para mi",
-        "Cada dia a tu lado es un paso mas hacia el futuro que soñamos",
-        "El tiempo vuela, pero mi amor por ti crece cada segundo",
-        "Aunque no lo diga tanto, eres lo mejor que me ha pasado",
-        "Aunque a veces no lo demuestre, siempre pienso en ti y en lo afortunado que soy",
-        "Aunque la vida nos ponga pruebas, se que juntos podemos con todo",
-        "Si tuviera que agradecerte por todo lo que has hecho y haces por mi, necesitaria otra vida entera",
-        "Gracias por hacerme el hombre mas feliz con tu amor",
-        "Gracias por hacer especial todos mis dias",
-        "Despertar sabiendo que eres mía es el mejor buen día posible",
-        "Eres la unica que le da sentido a todo",
-        "Mi mundo sin ti no podría girar",
-        "Mi mundo es mas brillante porque tu estas en él",
-        "La distancia hace mas fuerte el amor. Pronto estaré contigo para divertirnos y pasarla bien juntos",
-        "Si tuviera que vivir todas mis vidas de nuevo, en cada una te buscaría para amarte como lo hago ahora",
-        "El futuro contigo dan ganas de vivirlo",
-        "Te guardo en mi alma porque tu amor se vive y se siente",
-        "Eres la dueña absoluta de mi corazon"
+        "Gracias por estar siempre ahí",
+        "Gracias por tu amor incondicional",
+        "Gracias por hacerme tan feliz",
+        "Gracias por los momentos compartidos",
+        "Gracias por ser mi apoyo"
     ],
     futuro: [
-        "Prometo construir un futuro donde tu sonrisa sea mi mayor logro",
-        "Mi plan perfecto eres tu, y lo demás lo iremos construyendo juntos",
-        "Me imagino despertando cada dia a tu lado, escuchando tu linda voz diciendo 'buenos dias'",
-        "Prometo apoyarte en cada meta que te propongas",
-        "Celebrare todos tus logros y sere tu mayor admirador siempre",
-        "Nuestra casa estara lleno de amor",
-        "Mi mayor sueño sos vos en cada etapa de mi vida",
-        "Cualquier lugar donde tu estés sera mi destino favorito",
-        "Quiero envejecer contigo, recordando cada aventura que vivimos juntos",
-        "No importa si estamos ocupados, siempre voy a guardar espacio para compartir tiempo juntos",
-        "",
+        "Viajaremos juntos por el mundo",
+        "Construiremos un hogar lleno de amor",
+        "Creceremos juntos como personas",
+        "Superaremos todos los obstáculos unidos",
+        "Seguiremos creando recuerdos inolvidables"
     ],
     motivacion: [
-        "Eres tu misma y eso es lo mas especial",
-        "Pase lo que pase, estare aqui para celebrar tu exito y abrazarte en tus fracasos",
-        "No importa que tan dificil sea, caminare a tu lado sin dudarlo",
-        "Cuando dudes de ti misma, te prestare mis ojos porque yo te veo una verdadera guerrera",
-        "Eres mi inspiracion, si tu crees en ti, yo creo el doble",
-        "Te amo no solo por lo que eres, sino por lo que te has convertido: UNA MUJER MARAVILLOSA",
-        ""
+        "Eres capaz de lograr todo lo que te propongas",
+        "Tu fuerza interior es admirable",
+        "Cada día eres mejor persona",
+        "No hay nada que no puedas lograr",
+        "Tu determinación es inspiradora"
     ],
     biblicos: [
-        "Y sobre todas estas cosas vestíos de amor, que es el vínculo perfecto. (Colosenses 3:14)",
-        "Como llama divina es el fuego ardiente del amor. Ni las muchas aguas pueden apagarlo, ni los ríos pueden extinguirlo. (Cantares 8:6b-7a)",
-        "El amor es sufrido, es benigno; el amor no tiene envidia, el amor no es jactancioso, no se envanece. 1 Corintios 13:4",
-
+        "El amor es paciente, es bondadoso (1 Corintios 13:4)",
+        "Todo lo puedo en Cristo que me fortalece (Filipenses 4:13)",
+        "Porque de tal manera amó Dios al mundo (Juan 3:16)",
+        "El amor todo lo soporta (1 Corintios 13:7)",
+        "No temas, porque yo estoy contigo (Isaías 41:10)"
     ]
 };
 
-// Obtener o inicializar el estado guardado
+// Mensajes para notificaciones diarias
+const dailyMessages = [
+    "Hoy es un día perfecto para decirte que te amo",
+    "Eres lo mejor que me ha pasado en la vida",
+    "Mi corazón late más fuerte cuando estás cerca",
+    "Cada día a tu lado es un regalo del cielo",
+    "Eres mi razón para sonreír cada mañana",
+    "No hay distancia que pueda disminuir mi amor por ti",
+    "Eres mi sueño hecho realidad",
+    "Contigo hasta el fin del mundo",
+    "Te amo más que ayer, pero menos que mañana",
+    "Eres mi persona favorita en todo el universo"
+];
+
+// Sistema de persistencia
 function getSavedState() {
     const savedState = localStorage.getItem('notesState');
-    return savedState ? JSON.parse(savedState) : {
-        razones: [...notesByCategory.razones],
-        agradecimiento: [...notesByCategory.agradecimiento],
-        futuro: [...notesByCategory.futuro],
-        motivacion: [...notesByCategory.motivacion],
-        biblicos: [...notesByCategory.biblicos]
-    };
+    return savedState ? JSON.parse(savedState) : JSON.parse(JSON.stringify(notesByCategory));
 }
 
-// Guardar el estado actual
 function saveState(state) {
     localStorage.setItem('notesState', JSON.stringify(state));
 }
 
-// Estado inicial
 let state = getSavedState();
 
-// Función para generar una nota aleatoria y actualizar el estado
+// Funciones principales
 function getRandomNote(category) {
     const notes = state[category];
     if (notes.length === 0) return null;
 
     const randomIndex = Math.floor(Math.random() * notes.length);
     const note = notes[randomIndex];
-    
-    // Actualizar estado
     notes.splice(randomIndex, 1);
     state[category] = notes;
     saveState(state);
-    
     return note;
 }
 
-// Función para resetear todas las notas
-function resetAllNotes() {
-    if (confirm("¿Estás seguro que quieres reiniciar todas las notas? Esto volverá a habilitar todas las notas de todas las categorías.")) {
-        state = {
-            razones: [...notesByCategory.razones],
-            agradecimiento: [...notesByCategory.agradecimiento],
-            futuro: [...notesByCategory.futuro],
-            motivacion: [...notesByCategory.motivacion],
-            biblicos: [...notesByCategory.biblicos]
-        };
-        saveState(state);
-        alert("¡Todas las notas han sido reiniciadas! 🎉");
-    }
-}
-
-// Función para mostrar la nota como un modal (sin cambios)
 function showNoteModal(category, backgroundColor) {
     const noteText = getRandomNote(category);
-
     if (!noteText) {
-        alert("Ya has leído todas las notas de esta categoría! 🎉");
+        alert("¡Ya has leído todas las notas de esta categoría! 🎉");
         return;
     }
 
@@ -190,40 +101,225 @@ function showNoteModal(category, backgroundColor) {
     });
 }
 
-// Escuchar clics en los botones del sidebar (sin cambios)
-document.querySelectorAll(".buttons button").forEach((button) => {
-    button.addEventListener("click", () => {
-        const category = button.getAttribute("data-category");
-        const backgroundColor = button.style.backgroundColor;
-        showNoteModal(category, backgroundColor);
+// Navegación entre secciones
+document.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.nav-btn, .section').forEach(el => {
+            el.classList.remove('active');
+        });
+        
+        const section = btn.getAttribute('data-section');
+        btn.classList.add('active');
+        document.querySelector(`.${section}-section`).classList.add('active');
     });
 });
 
-// Añadir botón de reset (nuevo)
-function addResetButton() {
-    const sidebar = document.querySelector(".sidebar");
-    const resetBtn = document.createElement("button");
-    resetBtn.textContent = "Reiniciar todas las notas";
-    resetBtn.style.backgroundColor = "#888";
-    resetBtn.style.marginTop = "20px";
-    resetBtn.style.width = "100%";
-    resetBtn.addEventListener("click", resetAllNotes);
-    sidebar.appendChild(resetBtn);
+// Contador de tiempo
+function updateTimeTogether() {
+    const startDate = new Date('2024-08-09T00:00:00');
+    const now = new Date();
+    const diff = now - startDate;
+    
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    
+    document.getElementById('time-together').textContent = 
+        `❤️ ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos de amor ❤️`;
+    
+    // Actualizar display numérico
+    document.getElementById('days').textContent = days;
+    document.getElementById('hours').textContent = hours;
+    document.getElementById('minutes').textContent = minutes;
+    document.getElementById('seconds').textContent = seconds;
+    
+    checkMilestones(days);
+    updateUpcomingMilestones(days);
 }
 
-// Inicializar
-addResetButton();
+// Sistema de hitos
+function checkMilestones(days) {
+    const months = Math.floor(days / 30);
+    const daysInMonth = days % 30;
+    
+    const monthlyMessages = [
+        "", "¡Nuestro primer mes juntos! 💕", "¡2 meses de amor! 🌸", 
+        "¡3 meses! 🍁", "¡Cuarto mes! ☀️", "¡5 meses! 🌟", 
+        "Medio año juntos ⏳", "7 meses 🥰", "¡8 meses! 💘",
+        "9 meses 👶➡️❤️", "¡10 meses! 🎉", "11 meses ✨", 
+        "¡FELIZ ANIVERSARIO! 🎂"
+    ];
 
-// Efecto de scroll (sin cambios)
-let lastScrollTop = 0;
-const header = document.querySelector(".header");
+    const specialMilestones = {
+        100: "¡100 días de amor! 💯", 
+        200: "¡200 días juntos! 🌎",
+        365: "¡UN AÑO CONTIGO! 🎊",
+        500: "¡500 días de felicidad! 🌈",
+        730: "¡2 AÑOS JUNTOS! 🥳"
+    };
 
-window.addEventListener("scroll", () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop) {
-        header.style.transform = "translateY(-1.8%)";
-    } else {
-        header.style.transform = "translateY(0)";
+    if (daysInMonth === 0 && months > 0 && months <= 12) {
+        showMilestone(monthlyMessages[months]);
     }
-    lastScrollTop = scrollTop;
+    
+    if (specialMilestones[days]) {
+        showMilestone(specialMilestones[days]);
+    }
+}
+
+function updateUpcomingMilestones(currentDays) {
+    const milestones = [
+        { days: 100, message: "100 días" },
+        { days: 200, message: "200 días" },
+        { days: 365, message: "1 año" },
+        { days: 500, message: "500 días" },
+        { days: 730, message: "2 años" }
+    ];
+    
+    // Agregar hitos mensuales para los próximos 12 meses
+    for (let i = 1; i <= 12; i++) {
+        const targetDays = Math.ceil(currentDays / 30) * 30 + (i * 30);
+        milestones.push({
+            days: targetDays,
+            message: `${Math.floor(targetDays / 30)} meses`
+        });
+    }
+    
+    // Filtrar hitos futuros y ordenarlos
+    const upcoming = milestones
+        .filter(m => m.days > currentDays)
+        .sort((a, b) => a.days - b.days)
+        .slice(0, 5); // Mostrar solo los próximos 5
+    
+    const container = document.querySelector('.milestones-list');
+    container.innerHTML = '';
+    
+    upcoming.forEach(milestone => {
+        const daysLeft = milestone.days - currentDays;
+        const item = document.createElement('div');
+        item.className = 'milestone-item';
+        item.innerHTML = `
+            <i class="fas fa-calendar-check"></i>
+            <div>
+                <span class="milestone-days">${milestone.message}</span>
+                <span>en ${daysLeft} día${daysLeft !== 1 ? 's' : ''}</span>
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function showMilestone(message) {
+    if (document.querySelector('.milestone-modal')) return;
+    
+    const milestoneModal = document.createElement('div');
+    milestoneModal.className = 'milestone-modal';
+    milestoneModal.innerHTML = `
+        <div class="milestone-content">
+            <div class="milestone-header">🎉</div>
+            <h3>${message}</h3>
+            <p>${getRandomCompliment()}</p>
+            <button class="close-milestone">Cerrar</button>
+        </div>
+    `;
+    
+    document.body.appendChild(milestoneModal);
+    document.querySelector('.close-milestone').addEventListener('click', () => {
+        document.body.removeChild(milestoneModal);
+    });
+}
+
+function getRandomCompliment() {
+    const compliments = [
+        "Eres lo mejor que me ha pasado",
+        "Mi corazón es tuyo",
+        "Cada día contigo es especial",
+        "Te amo más que ayer",
+        "Eres mi sueño hecho realidad",
+        "No cambio lo nuestro por nada",
+        "Eres mi persona favorita",
+        "Contigo quiero envejecer",
+        "Eres mi razón para sonreír",
+        "Te amo más de lo que las palabras pueden expresar"
+    ];
+    return compliments[Math.floor(Math.random() * compliments.length)];
+}
+
+// Notificación diaria
+function showDailyNotification() {
+    const lastNotificationDate = localStorage.getItem('lastNotificationDate');
+    const today = new Date().toDateString();
+    
+    // Mostrar solo si no se ha mostrado hoy
+    if (lastNotificationDate !== today) {
+        const notification = document.querySelector('.daily-notification');
+        const message = dailyMessages[Math.floor(Math.random() * dailyMessages.length)];
+        
+        document.querySelector('.notification-message').textContent = message;
+        notification.classList.add('show');
+        
+        localStorage.setItem('lastNotificationDate', today);
+        
+        // Ocultar después de 10 segundos
+        setTimeout(() => {
+            notification.classList.remove('show');
+        }, 10000);
+    }
+}
+
+// Cerrar notificación manualmente
+document.querySelector('.close-notification').addEventListener('click', () => {
+    document.querySelector('.daily-notification').classList.remove('show');
+});
+
+// Inicialización
+document.addEventListener('DOMContentLoaded', function() {
+    // Botones de categorías
+    document.querySelectorAll(".buttons button").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const category = btn.getAttribute("data-category");
+            const backgroundColor = window.getComputedStyle(btn).backgroundColor;
+            showNoteModal(category, backgroundColor);
+        });
+    });
+    
+    // Activar sección de notas por defecto
+    document.querySelector('.notes-section').classList.add('active');
+    
+    // Iniciar contador
+    updateTimeTogether();
+    setInterval(updateTimeTogether, 1000);
+    
+    // Mostrar notificación diaria (con retraso para mejor UX)
+    setTimeout(showDailyNotification, 3000);
+    
+    // Inicializar calendario
+    flatpickr("#calendar", {
+        locale: "es",
+        dateFormat: "d/m/Y",
+        minDate: "2024-08-09",
+        maxDate: new Date().fp_incr(365 * 5), // 5 años en el futuro
+        onChange: function(selectedDates, dateStr, instance) {
+            if (selectedDates.length > 0) {
+                const selectedDate = selectedDates[0];
+                const startDate = new Date('2024-08-09T00:00:00');
+                const diff = selectedDate - startDate;
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                
+                showMilestone(`Fecha especial seleccionada: ${dateStr} (${days} días desde nuestro inicio)`);
+            }
+        }
+    });
+    
+    // Detección de dispositivo
+    if (window.innerWidth > 768) {
+        document.body.innerHTML = `
+            <div class="mobile-message">
+                <h2>💕 Esta app es solo para móviles</h2>
+                <p>Abre esta página desde tu teléfono para disfrutar de nuestra experiencia especial</p>
+                <p><small>Con todo mi amor - Tu pareja</small></p>
+            </div>
+        `;
+    }
 });
