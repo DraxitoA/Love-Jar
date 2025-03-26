@@ -1,3 +1,5 @@
-#Download Love Jar
+# Download Love Jar
+
 __**Instructions:**__
-  This app is only for Mobile Devices
+  
+This app is only for Mobile Devices
