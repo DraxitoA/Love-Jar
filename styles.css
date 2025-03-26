@@ -44,6 +44,17 @@ body {
     gap: 10px;
 }
 
+button[style*="background-color: #fff"] {
+    background-color: #fff !important;
+    color: white;
+    justify-content: center;
+}
+
+button[style*="background-color: #fff"]:hover {
+    background-color: #fff !important;
+    border: 2px solid #c2c2c2 !important;
+}
+
 button {
     border: none;
     border-radius: 5px;
@@ -113,7 +124,6 @@ button:hover {
     z-index: 1001;
 }
 
-/* Music section */
 .music-section {
     padding: 20px 10px;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(143,141,224,1) 0%, rgba(91,89,189,1) 100%);
@@ -125,19 +135,26 @@ button:hover {
     color: #fff;
     margin: 0 0 20px 10px;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .spotify-players {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10px;
+    gap: 15px;
     padding: 0 10px;
 }
 
 .spotify-players iframe {
     width: 100%;
     border-radius: 12px;
+    transition: transform 0.3s ease;
 }
+
+.spotify-players iframe:hover {
+    transform: scale(1.02);
+}
+
 
 /* Responsive design */
 @media (max-width: 1024px) {
