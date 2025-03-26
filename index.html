@@ -2,128 +2,54 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Frasco de Notas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Jar - Descarga</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="heartPX.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <h1>Frasco de Notas</h1>
-            <p>Hecho con amor para ti ♡</p>
+    <div class="container">
+        <div class="header">
+            <h1>Love Jar</h1>
+            <p class="subtitle">Una aplicación hecha con mucho amor</p>
         </div>
-    </div>
-
-    <div class="contenido">
-        <!-- Sección de Notas -->
-        <div class="notes-section section active">
-            <div class="sidebar">
-                <p>Selecciona una nota a leer:</p>
-                <div class="buttons">
-                    <button class="btn-category btn-category1" data-category="razones">
-                        <i class="fas fa-heart"></i> Razones por la que te amo
-                    </button>
-                    <button class="btn-category btn-category2" data-category="agradecimiento">
-                        <i class="fas fa-hands-praying"></i> Agradecimiento
-                    </button>
-                    <button class="btn-category btn-category3" data-category="futuro">
-                        <i class="fas fa-calendar-star"></i> Futuros planes
-                    </button>
-                    <button class="btn-category btn-category4" data-category="motivacion">
-                        <i class="fas fa-star"></i> Notas de Motivación
-                    </button>
-                    <button class="btn-category btn-category5" data-category="biblicos">
-                        <i class="fas fa-book-bible"></i> Frases Bíblicas
-                    </button>
-                </div>
-            </div>
-            <div class="notes-container"></div>
-        </div>
-
-        <!-- Sección de Música -->
-        <div class="music-section section">
-            <div class="section-header">
-                <h3><i class="fas fa-music"></i> Música que me recuerda a ti</h3>
-                <p class="subtitle">Canciones que hacen latir mi corazón por ti</p>
-            </div>
-            <div class="spotify-players">
-                <iframe loading="lazy" style="border-radius:12px" src="https://open.spotify.com/embed/track/6ERI20r4GlgPI6ZDVLcGMO?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                <iframe loading="lazy" style="border-radius:12px" src="https://open.spotify.com/embed/track/1SpO1TuC0yVzDnfLcZ85xA?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                <iframe loading="lazy" style="border-radius:12px" src="https://open.spotify.com/embed/track/4jjFjbqCTkaN1mGb0BMYl2?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                <iframe loading="lazy" style="border-radius:12px" src="https://open.spotify.com/embed/track/6cJLfIqwh0tCKRjYM3WpZ5?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-            </div>
-        </div>
-
-        <!-- Sección del Contador -->
-        <div class="counter-section section">
-            <div class="section-header">
-                <h3><i class="fas fa-clock"></i> Nuestro tiempo juntos</h3>
-                <p class="subtitle">Cada segundo a tu lado es un regalo</p>
+        
+        <div class="app-info">
+            <div class="feature">
+                <i class="fas fa-heart"></i>
+                <h3>Romántico</h3>
+                <p>Hecho con mensajes de amor y dedicación</p>
             </div>
             
-            <div class="time-counter">
-                <div id="time-together">Cargando...</div>
-                <div class="time-display">
-                    <div class="time-block">
-                        <span id="days">0</span>
-                        <span>Días</span>
-                    </div>
-                    <div class="time-block">
-                        <span id="hours">0</span>
-                        <span>Horas</span>
-                    </div>
-                    <div class="time-block">
-                        <span id="minutes">0</span>
-                        <span>Minutos</span>
-                    </div>
-                    <div class="time-block">
-                        <span id="seconds">0</span>
-                        <span>Segundos</span>
-                    </div>
-                </div>
+            <div class="feature">
+                <i class="fas fa-lock"></i>
+                <h3>Privado</h3>
+                <p>Solo tú puedes acceder a esta aplicación</p>
             </div>
             
-            <div class="calendar-container">
-                <input type="text" id="calendar" placeholder="Selecciona una fecha especial" readonly>
-            </div>
-            
-            <div class="milestones-container">
-                <h4><i class="fas fa-trophy"></i> Próximos hitos</h4>
-                <div class="milestones-list"></div>
+            <div class="feature">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Contador</h3>
+                <p>Un contador de nuestro tiempo juntos</p>
             </div>
         </div>
-    </div>
-
-    <!-- Menú Inferior -->
-    <div class="bottom-nav">
-        <button class="nav-btn active" data-section="notes">
-            <i class="fa-regular fa-envelope-open"></i>
-            <span class="text">Notas</span>
-        </button>
-        <button class="nav-btn" data-section="music">
-            <i class="fa-regular fa-compact-disc"></i>
-            <span class="text">Música</span>
-        </button>
-        <button class="nav-btn" data-section="counter">
-            <i class="fa-regular fa-calendar-days"></i>
-            <span class="text">Nuestro Tiempo</span>
-        </button>
-    </div>
-
-    <!-- Notificación diaria -->
-    <div class="daily-notification">
-        <div class="notification-content">
-            <button class="close-notification"><i class="fas fa-times"></i></button>
-            <h4>Mensaje del día</h4>
-            <p class="notification-message"></p>
+        
+        <div class="download-section">
+            <p>Clickea en el boton para descargar la aplicación</p>
+            <button class="btn-download">
+                <a class="dwnld" href="app-debug.apk" download="Love_Jar.apk">
+                    <i class="fas fa-download"></i> Descargar Love Jar
+                </a>
+            </button>
+            <p class="file-size">Tamaño: 12MB | Versión: 1.0</p>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+    
+    <footer>
+        <p>© 2025 Love Jar | Made by Jaecito ♡</p>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
